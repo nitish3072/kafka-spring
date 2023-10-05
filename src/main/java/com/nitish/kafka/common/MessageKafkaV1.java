@@ -29,7 +29,7 @@ public class MessageKafkaV1 implements AbstractMessageKafka {
 
     @Override
     public String toString() {
-        return "MqttMessageKafkaV1{" +
+        return "MessageKafkaV1{" +
                 "message='" + message + '\'' +
                 ", customerId='" + customerId + '\'' +
                 ", incomingMessageDeviceType='" + incomingMessageDeviceType + '\'' +

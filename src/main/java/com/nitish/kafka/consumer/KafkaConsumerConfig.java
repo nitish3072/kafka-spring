@@ -1,7 +1,7 @@
 package com.nitish.kafka.consumer;
 
 import com.nitish.kafka.common.AbstractMessageKafka;
-import com.nitish.kafka.common.CustomDeserializerMqtt;
+import com.nitish.kafka.common.CustomDeserializer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.annotation.Value;
@@ -45,8 +45,8 @@ public class KafkaConsumerConfig {
         props.put(ConsumerConfig.FETCH_MAX_WAIT_MS_CONFIG, fetchMaxWaitMs);
         props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false");
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
-        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, CustomDeserializerMqtt.class);
-        return new DefaultKafkaConsumerFactory<>(props, new StringDeserializer(), new CustomDeserializerMqtt());
+        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, CustomDeserializer.class);
+        return new DefaultKafkaConsumerFactory<>(props, new StringDeserializer(), new CustomDeserializer());
     }
 
     @Bean

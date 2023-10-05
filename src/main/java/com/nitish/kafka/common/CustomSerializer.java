@@ -6,7 +6,7 @@ import org.apache.kafka.common.serialization.Serializer;
 
 import java.util.Map;
 
-public class CustomSerializerMqtt implements Serializer<AbstractMessageKafka> {
+public class CustomSerializer implements Serializer<AbstractMessageKafka> {
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Override
